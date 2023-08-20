@@ -5,14 +5,11 @@
   * Return: void
   */
 
-int main(int ac, char **av)
+void prompt(void)
 {
 	char *prompt = "$ ";
 	char *lineptr;
 	size_t bytes = 0;
-
-	(void)ac;
-	(void)av;
 
 	while (1)
 	{

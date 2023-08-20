@@ -17,9 +17,9 @@ int main(int ac, char **av)
 
 
 
-	prompt();
-	/*getline(&buffer, &len, 0);*/
-	/*printf("%s", buffer);*/
+
+
+
 
 
 	free(buffer);
