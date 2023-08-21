@@ -9,18 +9,19 @@ int main(int ac, char **av)
 {
 
 	char *buffer = NULL;
-	ssize_t len = 0;
+	size_t len;
+	int bytes;
+
 
 	(void)ac;
 	(void)av;
-	(void)len;
 
-
-
-
-
-
-
+	while (1)
+	{
+		printf("$ \n");
+		bytes = getline(&buffer, &len, stdin);
+		printf("%s\n%d\n", buffer, bytes);
+	}
 
 	free(buffer);
 	return (0);
