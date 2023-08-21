@@ -1,75 +1,79 @@
 #include "main.h"
 
 /**
- * custom_strlen - returns the length of a string
- * @str: the string whose length to calculate
+ * len_str - Calculates the length of a provided string.
+ * @str: Pointer to the string.
  *
- * Return: integer length of the string
+ * Return: Number of characters in the string excluding the null terminator.
  */
-int custom_strlen(char *str)
+int len_str(char *str)
 {
-    int length = 0;
+	int count = 0;
 
-    if (!str)
-        return 0;
+	if (!str)
+		return (0);
 
-    while (*str++)
-        length++;
-    return length;
+	while (*str++)
+		count++;
+	return (count);
 }
 
 /**
- * custom_strcmp - performs lexicographic comparison of two strings.
- * @str1: the first string
- * @str2: the second string
+ * compare_strings - Compares two strings lexicographically.
+ * @strA: The first string.
+ * @strB: The second string.
  *
- * Return: negative if str1 < str2, positive if str1 > str2, zero if str1 == str2
+ * Return: 
+ * - Negative value if strA < strB,
+ * - Positive value if strA > strB, 
+ * - 0 if strA is equal to strB.
  */
-int custom_strcmp(char *str1, char *str2)
+int compare_strings(char *strA, char *strB)
 {
-    while (*str1 && *str2)
-    {
-        if (*str1 != *str2)
-            return (*str1 - *str2);
-        str1++;
-        str2++;
-    }
-    if (*str1 == *str2)
-        return 0;
-    else
-        return (*str1 < *str2 ? -1 : 1);
+	while (*strA && *strB)
+	{
+		if (*strA != *strB)
+			return (*strA - *strB);
+		strA++;
+		strB++;
+	}
+	if (*strA == *strB)
+		return (0);
+	else
+		return (*strA < *strB ? -1 : 1);
 }
 
 /**
- * custom_starts_with - checks if prefix starts with main_string
- * @main_string: the main string to search within
- * @prefix: the prefix to find
+ * begins_with - Checks if the main_str starts with sub_str.
+ * @main_str: The main string to be checked.
+ * @sub_str: The substring to be matched.
  *
- * Return: address of next character in main_string after the prefix, or NULL
+ * Return: Address of next character in main_str after the sub_str, 
+ *         or NULL if main_str doesn't start with sub_str.
  */
-char *custom_starts_with(const char *main_string, const char *prefix)
+char *begins_with(const char *main_str, const char *sub_str)
 {
-    while (*prefix)
-        if (*prefix++ != *main_string++)
-            return NULL;
-    return (char *)main_string;
+	while (*sub_str)
+		if (*sub_str++ != *main_str++)
+			return (NULL);
+	return ((char *)main_str);
 }
 
 /**
- * custom_strcat - concatenates two strings
- * @destination: the destination buffer
- * @source: the source buffer
+ * join_strings - Joins two strings together.
+ * @buffer: The destination buffer.
+ * @addition: The source buffer to be added.
  *
- * Return: pointer to destination buffer
+ * Return: Pointer to the combined string in the destination buffer.
  */
-char *custom_strcat(char *destination, char *source)
+char *join_strings(char *buffer, char *addition)
 {
-    char *result = destination;
+	char *initial = buffer;
 
-    while (*destination)
-        destination++;
-    while (*source)
-        *destination++ = *source++;
-    *destination = *source;
-    return result;
+	while (*buffer)
+		buffer++;
+	while (*addition)
+		*buffer++ = *addition++;
+	*buffer = *addition;
+	return (initial);
 }

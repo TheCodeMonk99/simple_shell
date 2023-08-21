@@ -13,9 +13,9 @@
 #include <errno.h>
 int _putchar(char c);
 int _printstring(char *str);
-int custom_strlen(char *);
-int custom_strcmp(char *, char *);
-char *custom_starts_with(const char *, const char *);
-char *custom_strcat(char *, char *);
+int len_str(char *);
+int compare_strings(char *, char *);
+char *begins_with(const char *, const char *);
+char *join_strings(char *, char *);
 /*void prompt();*/
 #endif
