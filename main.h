@@ -45,7 +45,7 @@ char *_strtok(char *str, char *delim);
 char *check_path(char *argm);
 
 int _getchar(void);
-char *_strcat(char *directory, char *slash, char *arg);
+char *link_paths(char *directory, char *slash, char *arg);
 int _strlen(char *s);
 int p_aux_int(long int n, long int);
 int p_str(va_list arguments);
