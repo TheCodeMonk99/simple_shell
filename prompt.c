@@ -7,17 +7,10 @@
 
 void prompt(void)
 {
-	char *prompt = "$ ";
-	char *lineptr;
-	size_t bytes = 0;
+	int i = 0;
 
-	while (1)
-	{
-		printf("%s\n", prompt);
-		getline(&lineptr, &bytes, stdin);
-		printf("%s\n", lineptr);
-	}
-
-	free(lineptr);
-	return (0);
+	if ((isatty(STDIN_FILENO) == 1) && (isatty(STDOUT_FILENO) == 1))
+		i = 1;
+	if (i)
+		write(STDERR_FILENO, "$ ", 2);
 }
