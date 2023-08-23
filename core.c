@@ -156,7 +156,7 @@ char *_which(link_t **head, char *av)
 
 	while (pus)
 	{
-		buffer = _strcat(pus->dir, "/", av);
+		buffer = link_paths(pus->dir, "/", av);
 		if (access(buffer, X_OK) == 0)
 		{
 			return (buffer);
