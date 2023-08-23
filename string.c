@@ -78,28 +78,34 @@ char *join_strings(char *buffer, char *addition)
 	return (initial);
 }
 /**
- * _strcat - concatenate directories with the 1st position of the array
+ * link_paths - links a directory, slash character and argument string
  * @directory: directories
  * @slash: /
- * @arg: array of commands.
+ * @arg: argument string to link
  * Return: str
  **/
-char *_strcat(char *directory, char *slash, char *arg)
+char *link_paths(char *directory, char *slash, char *arg)
 {
 	char *str = NULL;
 	int l1, l2, i, k;
-
+	
+	/* calculate length of input string */
 	l1 = _strlen(directory);
 	l2 = _strlen(arg);
+	/* allocates memory to linked string */
 	str = malloc(sizeof(char) * (l1 + l2 + 2));
 	if (!str)
 		return (NULL);
+	/* copy directory to new string */
 	for (i = 0; directory[i]; i++)
 		str[i] = directory[i];
+	/* add slash charcter to new string */
 	str[i] = *slash;
 	k = i + 1;
+	/*copy argument string to new string*/
 	for (i = 0; arg[i]; i++)
 		str[k + i] = arg[i];
+	/*add null terminator to new string*/
 	str[k + i] = '\0';
 	return (str);
 }
