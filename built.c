@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-  * _exit - check if cmd is exit
+  * _mexit - check if cmd is exit
   * @line: input to be checked
   * Return: 0 if exit 1 if otherwise
   **/
