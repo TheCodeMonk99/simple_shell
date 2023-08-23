@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * create _linked_list -creates a  linked list frm dirs
+ * _link - linked list with dirs
  * @a: PATH
  * Return: head
  **/
-link_t *create_linked_list(char *a)
+link_t *_link(char *a)
 {
 	link_t *head = NULL;
 	char *token;
@@ -18,12 +18,12 @@ link_t *create_linked_list(char *a)
 	return (head);
 }
 /**
- * _add_node_at_end - add a node at the end
- * @head: pointer to head of linkes list
+ * _add_nodeint_end - add a node at the end
+ * @head: head
  * @n: dirs
  * Return: head
  **/
-link_t *_add_node_at_end(link_t **head, char *n)
+link_t *_add_nodeint_end(link_t **head, char *n)
 {
 	link_t *new_node;
 	link_t *last_node = *head;

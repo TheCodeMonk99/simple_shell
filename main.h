@@ -31,7 +31,7 @@ extern char **environ;
 char *execute_command(char *argm);
 int _printf(const char *format, ...);
 int execute_process(char **argm, char **argv, int counter);
-link_t *_add_node_at_end(link_t **head, char *n);
+link_t *_add_nodeint_end(link_t **head, char *n);
 size_t _print_listint(link_t *h);
 /*strings*/
 int _putchar(char c);
@@ -56,7 +56,7 @@ int p_int(va_list arguments);
 char *_getenv(const char *name);
 char **splitline(char *command_line);
 void signal_c(int sign);
-link_t *create_linked_list(char *a);
+link_t *_link(char *a);
 
 char *_which(link_t **head, char *av);
 void free_list(link_t *head);
