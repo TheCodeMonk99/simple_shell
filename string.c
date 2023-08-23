@@ -88,7 +88,7 @@ char *link_paths(char *directory, char *slash, char *arg)
 {
 	char *str = NULL;
 	int l1, l2, i, k;
-	
+
 	/* calculate length of input string */
 	l1 = _strlen(directory);
 	l2 = _strlen(arg);

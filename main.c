@@ -32,7 +32,7 @@ int main(int ac, char **argv, char **env)
 		if (rd != EOF)
 		{
 			count++;
-			strtok(cmdl, "\n");
+			_strtok(cmdl, "\n");
 			if (_mexit(cmdl) == 0)
 				return (0);
 			if (_env(cmdl, count, argv, env) == 0)
