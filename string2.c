@@ -1,14 +1,14 @@
 #include "main.h"
 /**
  * _strlen - len of a string
- * @src: string
+ * @source:input string
  * Return: byte-length
  **/
-int _strlen(char *src)
+int _strlen(char *source)
 {
 	int u;
 
-	for (u = 0; src[u]; u++)
+	for (u = 0; source[u]; u++)
 	{
 	}
 	return (u);
@@ -42,6 +42,7 @@ char *_strtok(char *str, char *delim)
 			break;
 		}
 	}
+	/*tokenize the string*/
 	for (; str[m] != '\0' ; m++)
 		if (str[m] != delim[0])
 			break;
